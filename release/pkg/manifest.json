@@ -1,6 +1,6 @@
 {
   "name": "Skateboard",
-  "version_number": "1.0.0",
+  "version_number": "1.0.1",
   "website_url": "https://github.com/scheissgeist/gk2-skateboard",
   "description": "Ride a skateboard around the graveyard. K / L3 to get on, Space / RT to ollie. Carving, coasting, wheel sounds and a pixel-art board with bone wheels.",
   "dependencies": [
