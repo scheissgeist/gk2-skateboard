@@ -1,0 +1,7 @@
+bin/
+obj/
+release/*.zip
+release/media/
+release/pkg/*.dll
+*.user
+.vs/

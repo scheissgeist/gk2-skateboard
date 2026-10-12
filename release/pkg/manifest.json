@@ -1,0 +1,9 @@
+{
+  "name": "Skateboard",
+  "version_number": "1.0.0",
+  "website_url": "",
+  "description": "Ride a skateboard around the graveyard. K / L3 to get on, Space / RT to ollie. Carving, coasting, wheel sounds and a pixel-art board with bone wheels.",
+  "dependencies": [
+    "BepInEx-BepInExPack-5.4.2305"
+  ]
+}
