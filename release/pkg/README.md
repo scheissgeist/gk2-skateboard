@@ -2,6 +2,8 @@
 
 The keeper finally gets a set of wheels. Hop on a skateboard and roll around the graveyard, the village and everywhere in between.
 
+![Riding the skateboard](https://raw.githubusercontent.com/scheissgeist/gk2-skateboard/main/media/skateboard1.png)
+
 ## Controls
 
 | Action | Keyboard | Gamepad |
@@ -52,3 +54,5 @@ All sounds are CC0 recordings from Freesound:
 - "skateboard ollie" by nolimitkid
 
 See CREDITS.md for links.
+
+Source: https://github.com/scheissgeist/gk2-skateboard
