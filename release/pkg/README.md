@@ -23,12 +23,26 @@ The gamepad buttons were chosen because Graveyard Keeper 2 doesn't use them, so 
 
 ## Install
 
-Install with a mod manager (r2modman or the Thunderstore app). It pulls in BepInEx automatically.
+### With a mod manager (easiest)
+1. Install [r2modman](https://thunderstore.io/package/ebkr/r2modman/) or the Thunderstore app, and pick Graveyard Keeper 2.
+2. Search for **Skateboard** and click Install. BepInEx comes with it.
+3. Start the game from the mod manager. Press **K** in game to ride.
 
-**Manual install:**
+### Manual
+1. **Find the game folder.** In Steam, right-click Graveyard Keeper 2, then Manage, then Browse local files. It's the folder with `GraveyardKeeper2.exe`.
+2. **Install BepInEx.**
+   - Download [BepInExPack](https://thunderstore.io/c/graveyard-keeper-2/p/BepInEx/BepInExPack/) and open the zip.
+   - Copy everything inside its `BepInExPack` folder into the game folder: the `BepInEx` folder, `winhttp.dll` and `doorstop_config.ini`.
+3. **Run the game once, then close it.** This creates the `BepInEx/plugins` folder.
+4. **Add the mod.**
+   - Download `GK2Skateboard.dll` from the [latest release](https://github.com/scheissgeist/gk2-skateboard/releases/latest).
+   - Put it in `BepInEx/plugins/GK2Skateboard/` (create that folder if it isn't there).
+5. **Check it loaded.** Start the game and open `BepInEx/LogOutput.log`. It should contain `Skateboard 1.0.0 loaded`. Load a save and press **K**.
 
-1. Install [BepInExPack](https://thunderstore.io/c/graveyard-keeper-2/p/BepInEx/BepInExPack/) (BepInEx 5.4.23.x, x64).
-2. Put `GK2Skateboard.dll` in `BepInEx/plugins/GK2Skateboard/`.
+### Uninstall
+Delete the `BepInEx/plugins/GK2Skateboard` folder. The mod changes nothing in your save.
+
+To remove BepInEx completely, also delete `BepInEx/`, `winhttp.dll`, `doorstop_config.ini` and `.doorstop_version` from the game folder.
 
 ## Config
 
