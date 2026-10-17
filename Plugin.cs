@@ -223,10 +223,14 @@ namespace GK2Skateboard
             if (walkInputSince < 0f) walkInputSince = Time.time;
             // Skip leftover skate momentum after a dismount and the acceleration ramp at the start of a walk.
             if (Time.time - dismountedAt < 2f || Time.time - walkInputSince < 0.5f) return;
+            // Only sample plain walking: combat states (bow/sword aim, attacks) set SpeedMultiplier to 0.5,
+            // and a slowed first sample used to lock the board's top speed below walking for the whole session.
+            if (Mathf.Abs(body.SpeedMultiplier - 1f) > 0.01f) return;
             float s = ToScreen(Vector3.ProjectOnPlane(body.Rb.linearVelocity, -body.GravityNormalized)).magnitude;
             if (s < 1f || s > 8f) return;
             if (!walkMeasured) { walkMeasured = true; walkSpeed = s; }
-            else if (Mathf.Abs(s - walkSpeed) < walkSpeed * 0.4f) walkSpeed = Mathf.Lerp(walkSpeed, s, 0.02f);
+            else if (s > walkSpeed) walkSpeed = Mathf.Lerp(walkSpeed, s, 0.1f);   // recover quickly from a low reference
+            else if (s > walkSpeed * 0.6f) walkSpeed = Mathf.Lerp(walkSpeed, s, 0.02f); // ignore slopes/obstacles
         }
     }
 

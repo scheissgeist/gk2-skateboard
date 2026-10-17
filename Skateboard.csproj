@@ -32,7 +32,7 @@
     <Reference Include="UnityEngine.ImageConversionModule" HintPath="$(Managed)\UnityEngine.ImageConversionModule.dll" Private="false" />
   </ItemGroup>
 
-  <Target Name="DeployToGame" AfterTargets="Build">
+  <Target Name="DeployToGame" AfterTargets="Build" Condition="'$(SkipDeploy)' != 'true'">
     <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(GameDir)\BepInEx\plugins\GK2Skateboard" />
   </Target>
 
