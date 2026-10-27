@@ -5,3 +5,19 @@ release/media/
 release/pkg/*.dll
 *.user
 .vs/
+
+# Secrets: never commit
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+credentials*
+secrets*
+*.secret
+.npmrc
+.pypirc
