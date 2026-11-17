@@ -11,7 +11,7 @@ A BepInEx mod that lets the keeper ride a skateboard around the graveyard.
 | Get on / off | K | L3 (click left stick) |
 | Ollie | Space | RT |
 
-You can change these in `BepInEx/config/sean.gk2.skateboard.cfg`. The same file also holds speed, acceleration, coasting, turning, braking, ride height, ollie height and volume.
+You can change these in `BepInEx/config/sean.gk2.skateboard.cfg`. The same file also holds speed, acceleration, coasting, turning, braking, ride height, ollie height, rolling volume and impact volume.
 
 ## Install
 
@@ -29,7 +29,7 @@ You can change these in `BepInEx/config/sean.gk2.skateboard.cfg`. The same file 
 4. **Add the mod.**
    - Download `GK2Skateboard.dll` from the [latest release](https://github.com/scheissgeist/gk2-skateboard/releases/latest).
    - Put it in `BepInEx/plugins/GK2Skateboard/` (create that folder if it isn't there).
-5. **Check it loaded.** Start the game and open `BepInEx/LogOutput.log`. It should contain `Skateboard 1.0.0 loaded`. Load a save and press **K**.
+5. **Check it loaded.** Start the game and open `BepInEx/LogOutput.log`. It should contain `Skateboard 1.0.2 loaded`. Load a save and press **K**.
 
 ### Uninstall
 Delete the `BepInEx/plugins/GK2Skateboard` folder. The mod changes nothing in your save.

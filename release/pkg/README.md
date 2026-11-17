@@ -37,7 +37,7 @@ The gamepad buttons were chosen because Graveyard Keeper 2 doesn't use them, so 
 4. **Add the mod.**
    - Download `GK2Skateboard.dll` from the [latest release](https://github.com/scheissgeist/gk2-skateboard/releases/latest).
    - Put it in `BepInEx/plugins/GK2Skateboard/` (create that folder if it isn't there).
-5. **Check it loaded.** Start the game and open `BepInEx/LogOutput.log`. It should contain `Skateboard 1.0.0 loaded`. Load a save and press **K**.
+5. **Check it loaded.** Start the game and open `BepInEx/LogOutput.log`. It should contain `Skateboard 1.0.2 loaded`. Load a save and press **K**.
 
 ### Uninstall
 Delete the `BepInEx/plugins/GK2Skateboard` folder. The mod changes nothing in your save.
@@ -51,7 +51,7 @@ The config file is `BepInEx/config/sean.gk2.skateboard.cfg`. It's created on fir
 - keys and pad buttons
 - top speed, acceleration, coasting, turning and braking
 - ride height and ollie height
-- sound volume
+- rolling volume and impact volume
 
 ## Notes
 

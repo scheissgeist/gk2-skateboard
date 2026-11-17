@@ -13,7 +13,7 @@ namespace GK2Skateboard
     public class Plugin : BaseUnityPlugin
     {
         public const string Guid = "sean.gk2.skateboard";
-        public const string Version = "1.0.0";
+        public const string Version = "1.0.2";
 
         internal static ManualLogSource Log;
         internal static ConfigEntry<KeyboardShortcut> ToggleKey;
@@ -24,6 +24,7 @@ namespace GK2Skateboard
         internal static ConfigEntry<float> BrakeTime;
         internal static ConfigEntry<bool> DebugLog;
         internal static ConfigEntry<float> Volume;
+        internal static ConfigEntry<float> ImpactVolume;
         internal static ConfigEntry<string> PadButton;
         internal static ConfigEntry<string> OlliePadButton;
         internal static ConfigEntry<KeyboardShortcut> OllieKey;
@@ -44,7 +45,8 @@ namespace GK2Skateboard
             OllieKey = Config.Bind("Controls", "OllieKey", new KeyboardShortcut(KeyCode.Space), "Keyboard ollie while riding.");
             RideHeightPx = Config.Bind("Visual", "RideHeightPixels", 5, "Art pixels the keeper is lifted to stand on the deck.");
             OllieHeightPx = Config.Bind("Visual", "OllieHeightPixels", 14, "Peak height of an ollie, in art pixels.");
-            Volume = Config.Bind("Audio", "Volume", 0.6f, new ConfigDescription("Board sound volume (on top of the game's SFX volume).", new AcceptableValueRange<float>(0f, 1f)));
+            Volume = Config.Bind("Audio", "Volume", 0.6f, new ConfigDescription("Board rolling-loop volume (on top of the game's SFX volume).", new AcceptableValueRange<float>(0f, 1f)));
+            ImpactVolume = Config.Bind("Audio", "ImpactVolume", 0.35f, new ConfigDescription("Ollie pop and landing volume (on top of the game's SFX volume). Lower than Volume so the jump/land smash sits with the rest of the SFX.", new AcceptableValueRange<float>(0f, 1f)));
             DebugLog = Config.Bind("Debug", "VerboseLog", false, "Log speeds and renderer setup.");
 
             var harmony = new Harmony(Guid);

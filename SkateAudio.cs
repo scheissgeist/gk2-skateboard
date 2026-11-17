@@ -41,13 +41,13 @@ namespace GK2Skateboard
         public void OnOllie()
         {
             airborne = true;
-            shotSrc.PlayOneShot(pop, Plugin.Volume.Value);
+            shotSrc.PlayOneShot(pop, Plugin.ImpactVolume.Value);
         }
 
         public void OnLand()
         {
             airborne = false;
-            shotSrc.PlayOneShot(land, Plugin.Volume.Value);
+            shotSrc.PlayOneShot(land, Plugin.ImpactVolume.Value);
         }
 
         private void Update()
